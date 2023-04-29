@@ -48,11 +48,39 @@ async def flipcoin(ctx):
 	await ctx.send(result)
 
 @bot.command()
+async def rps(ctx, user_choice):
+	moves = ['rock', 'paper', 'scissors']
+	bot_choice = random.choice(moves)
+	if user_choice not in moves:
+		await ctx.send('Please choose a valid move!')
+	else:
+		await ctx.send(f'You chose {user_choice}')
+		await ctx.send(f'I chose {bot_choice}')
+		if user_choice == bot_choice:
+			await ctx.send(f"We both chose {user_choice}, it's a tie!")
+		elif user_choice == 'rock':
+			if bot_choice == 'scissors':
+				await ctx.send('Rock smashes scissors! You win!')
+			else:
+				await ctx.send('Paper covers rock! You lose.')
+		elif user_choice == 'paper':
+			if bot_choice == 'rock':
+				await ctx.send('Paper covers rock! You win!')
+			else:
+				await ctx.send('Scissors cuts paper! You lose.')
+		elif user_choice == 'scissors':
+			if bot_choice == 'paper':
+				await ctx.send('Scissors cuts paper! You win!')
+			else:
+				await ctx.send('Rock smashes scissors! You lose.')
+
+@bot.command()
 async def commands(ctx):
 	await ctx.send('''Here are some useful commands:
 $hello - A simple greeting.
 $randomnumber - Generates a random number given a specified range.
 $flipcoin - Flips a coin, and provides the random result.
+$rps [choice] - Play rock paper scissors with JAUB.
 $commands - Provides a list of useful commands.''')
 
 @bot.tree.command(name='hello', description='A simple greeting.')
@@ -67,6 +95,7 @@ async def help(interaction: discord.Interaction):
 $hello - Another simple greeting.
 $randomnumber [x] [y] - Generates a random number given a specified range.
 $flipcoin - Flips a coin, and provides the random result.
+$rps [choice] - Play rock paper scissors with JAUB.
 $commands - A simpler approach to the help menu (does not include / commands).''')
 
 bot.run(BOT_TOKEN)
