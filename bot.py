@@ -1,10 +1,14 @@
+from dotenv import load_dotenv
 import discord
 from discord import app_commands
 from discord.ext import commands
 import random
 import time
+import os
 
-BOT_TOKEN = "MTEwMTY4NjkyMzkyOTU4Mzc0OA.GJDUMV.f33eohR1zrulemkPFfunzbujy8vXgcHsXc4z2w"
+load_dotenv()
+
+BOT_TOKEN = os.environ.get('token')
 CHANNEL_ID = 1096483275796652034
 
 bot = commands.Bot("$", intents=discord.Intents.all())
