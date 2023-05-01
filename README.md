@@ -1,2 +1,2 @@
 # jaub
-Just Another Discord Bot
+Just Another Useful (Discord) Bot
