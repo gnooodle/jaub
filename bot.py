@@ -8,8 +8,8 @@ import os
 
 load_dotenv()
 
-BOT_TOKEN = os.environ.get('token')
-CHANNEL_ID = 1096483275796652034
+BOT_TOKEN = os.environ.get('token') #Create a .env for storing ideally
+CHANNEL_ID = #ChannelID Here
 
 bot = commands.Bot("$", intents=discord.Intents.all())
 
