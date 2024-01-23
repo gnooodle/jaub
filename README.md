@@ -8,7 +8,7 @@ To get it up and running, a few changes need to be made.
 
 Create a python venv: `python3 -m venv environment` (example name "environment" given)
 
-Install the requirements in the venv: `pip install -r requirements.txt` (after starting the venv, `environment\Scripts\activate`)
+Install the requirements in the venv: `pip install -r requirements.txt` (after starting the venv with `environment\Scripts\activate`)
 
 Create a `.env` to ideally store the `BOT_TOKEN` (in the example, it is simply called `token` within the `.env`)
 
