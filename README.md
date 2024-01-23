@@ -6,7 +6,7 @@ To get it up and running, a few changes need to be made.
 
 ### Install
 
-Create a python venv: `python3 -m venv environment` (example name "environment" given)
+Create a python venv: `python -m venv environment` (example name "environment" given)
 
 Install the requirements in the venv: `pip install -r requirements.txt` (after starting the venv with `environment\Scripts\activate`)
 
