@@ -10,3 +10,4 @@ call pip install -r requirements.txt
 @echo Deactivating virtual environment...
 deactivate
 @echo JAUB installed.
+pause
