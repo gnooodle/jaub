@@ -18,4 +18,4 @@ It should also be noted that this is tested on and made for use on Windows, so n
 
 ### To come
 
-<s>An install script to make setup quicker/easier.</s>
+<s>An install script to make setup quicker/easier.</s> Done!
