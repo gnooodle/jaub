@@ -6,15 +6,11 @@ To get it up and running, a few changes need to be made.
 
 ### Install
 
-Create a python venv: `python -m venv environment` (example name "environment" given)
-
-Install the requirements in the venv: `pip install -r requirements.txt` (after starting the venv with `environment\Scripts\activate`)
+Make sure Python is installed properly, and run the `install.bat`
 
 Create a `.env` to ideally store the `BOT_TOKEN` (in the example, it is simply called `token` within the `.env`)
 
 Find the desired `CHANNEL_ID` from Discord for startup message(s) to be sent to (this does not apply to general use, it can be used in any server/channel it has permissions in.)
-
-Add the path to the bot directory in `start.bat`
 
 To start simply run the `start.bat` which will automatically use the venv created.
 
